@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout from gitRepo') {
+            steps {
+                echo 'Polling the GitHub'
+                git branch: 'main', credentialsId: '3c6c6d3e-4f17-44ee-a9cc-d06927fd0634', url: 'https://github.com/akashlahane33/PipelineSCM'
+            }
+        }
+        
+        stage('Run') {
+            steps {
+                echo 'Run java class with Ant with gitHub'
+                withAnt(installation: 'ant9', jdk: 'java8') {
+                bat "ant -f ./build.xml run"
+}
+            }
+        }
+    }
+}
