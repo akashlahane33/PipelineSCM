@@ -72,7 +72,7 @@ pipeline {
                   def lastName = customer.get('lastName');
 			
                   def user = firstName + lastName
-                  def file= new File("E:/data/user.txt")
+                  def file= new File("E:user.txt")
                   def oStream = new FileOutputStream(file,true)
 			
                   oStream.write(user.getBytes());
