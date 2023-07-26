@@ -11,7 +11,6 @@ pipeline {
         
         stage('Accessing API from external server') {
             steps {
-                script {
                   println "The groovy runtime version is $GroovySystem.version"
 
                   def getURL = new URL('http://localhost:1100/rest-api/customers/1')
@@ -33,7 +32,6 @@ pipeline {
 	               line = reader.readLine();
                     }
                   connection.disconnect();
-                }
             }
         }
     }
