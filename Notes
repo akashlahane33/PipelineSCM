@@ -1,0 +1,79 @@
+Important commands -
+
+Launch Jenkins - java -jar jenkins.war --httpPort=9090
+
+SET tomcat path -- set CATALINA_HOME=C:\apache-tomcat-8.5.91\apache-tomcat-8.5.91
+
+
+Sample CMD commands ---
+
+Microsoft Windows [Version 10.0.22621.1992]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DELL>cd C:\Jenkins-build-jobs\Simple-Ant
+
+C:\Jenkins-build-jobs\Simple-Ant>git init
+Initialized empty Git repository in C:/Jenkins-build-jobs/Simple-Ant/.git/
+
+C:\Jenkins-build-jobs\Simple-Ant>git add *
+
+C:\Jenkins-build-jobs\Simple-Ant>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Test.class
+        new file:   Test.java
+        new file:   bin/Test.class
+        new file:   build.xml
+
+
+C:\Jenkins-build-jobs\Simple-Ant>git commit
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'DELL@DESKTOP-2PD2VFI.(none)')
+
+C:\Jenkins-build-jobs\Simple-Ant>git commit -m "My first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'DELL@DESKTOP-2PD2VFI.(none)')
+
+C:\Jenkins-build-jobs\Simple-Ant> git config --global user.email "akashlahane33@gmail.com"
+
+C:\Jenkins-build-jobs\Simple-Ant> git config --global user.name "Your Name"akashlahane33"
+
+C:\Jenkins-build-jobs\Simple-Ant> git commit -m "My first commit"
+[master (root-commit) 0037e26] My first commit
+ 4 files changed, 48 insertions(+)
+ create mode 100644 Test.class
+ create mode 100644 Test.java
+ create mode 100644 bin/Test.class
+ create mode 100644 build.xml
+
+C:\Jenkins-build-jobs\Simple-Ant>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Jenkins-build-jobs\Simple-Ant>
