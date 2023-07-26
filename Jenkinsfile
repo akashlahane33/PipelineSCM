@@ -65,6 +65,18 @@ pipeline {
                   println "The response customer details are $firstName and $lastName"
 
                   println "Done with Get"
+
+		  //write response in file
+
+		  def firstName = customer.get('firstName');
+                  def lastName = customer.get('lastName');
+			
+                  def user = firstName + lastName
+                  def file= new File("E:/data/user.txt")
+                  def oStream = new FileOutputStream(file,true)
+			
+                  oStream.write(user.getBytes());
+                  oStream.close()
 		}
             }
         }
