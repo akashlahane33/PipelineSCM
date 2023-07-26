@@ -5,12 +5,13 @@ pipeline {
         stage('Checkout GitHub') {
             steps {
                 echo 'Checking out from gitHub'
-                git branch: 'main', credentialsId: '3c6c6d3e-4f17-44ee-a9cc-d06927fd0634', url: 'https://github.com/akashlahane33/PipelineSCM'
+                //git branch: 'main', credentialsId: '3c6c6d3e-4f17-44ee-a9cc-d06927fd0634', url: 'https://github.com/akashlahane33/PipelineSCM'
             }
         }
         
         stage('Accessing API from external server') {
             steps {
+		script {
                   println "The groovy runtime version is $GroovySystem.version"
 
                   def getURL = new URL('http://localhost:1100/rest-api/customers/1')
@@ -32,6 +33,7 @@ pipeline {
 	               line = reader.readLine();
                     }
                   connection.disconnect();
+		}
             }
         }
     }
